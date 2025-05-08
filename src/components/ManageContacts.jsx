@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import { ContactContext } from '../context/ContactContext';
 import EditContactModal from './EditContactModal';
 import { getSingleContact } from '../lib/contactApi';
+const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
+ console.log("path", VITE_BASE_URL)
 
 const ManageContacts = () => {
   const { contacts, deleteContact, fetchContacts, updateContact } = useContext(ContactContext);

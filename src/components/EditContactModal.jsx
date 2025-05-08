@@ -57,7 +57,7 @@ const EditContactModal = ({ isOpen, onClose, selectedContact }) => {
               type="email"
               id="email"
               value={email}
-              // onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded"
             />
           </div>

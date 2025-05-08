@@ -4,8 +4,8 @@
  console.log()
 
   
-  export  const getAllContact = async() => {
-    const response = await fetch(`${VITE_BASE_URL}api/contacts`, {
+  export const getAllContact = async() => {
+    const response = await fetch(`${VITE_BASE_URL}/api/contacts`, {
      method:"GET"
     })
      const data = await response.json()
@@ -13,10 +13,9 @@
 
       return data
   }  
- // Function to get all contacts
 
   export const deleteContactById = async (id) => {
-    const response = await fetch(`${VITE_BASE_URL}api/contacts/${id}`, {
+    const response = await fetch(`${VITE_BASE_URL}/api/contacts/${id}`, {
       method: "DELETE"
     });
     if (!response.ok) {
@@ -25,7 +24,7 @@
   };
 
   export const updateContacts = async (id, updatedContact) => {
-    const response = await fetch(`${VITE_BASE_URL}api/contacts/${id}`, {
+    const response = await fetch(`${VITE_BASE_URL}/api/contacts/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -40,7 +39,7 @@
   };
 
   export const createContact = async (contact) => {
-    const response = await fetch(`${VITE_BASE_URL}api/contacts`, {
+    const response = await fetch(`${VITE_BASE_URL}/api/contacts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -59,7 +58,7 @@
     console.log("id edit", id);
   
     try {
-      const response = await fetch(`${ VITE_BASE_URL}api/contacts/${id}`, {
+      const response = await fetch(`${ VITE_BASE_URL}/api/contacts/${id}`, {
         method: "GET"
       });
   
