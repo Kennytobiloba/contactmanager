@@ -1,7 +1,7 @@
 
- const VITE_BASE_URL = "http://localhost:3000/"
-  console.log("http://localhost:3000/api")
-
+ const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
+ 
+ console.log()
 
   
   export  const getAllContact = async() => {

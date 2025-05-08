@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { ContactContext } from '../context/ContactContext';
 import { toast } from 'react-toastify';
-
+const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
+ 
+console.log("path", VITE_BASE_URL)
 
 const AddContact = () => {
   const [name, setName] = useState('');
